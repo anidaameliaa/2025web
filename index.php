@@ -1,3 +1,10 @@
+<?php
+include "koneksi.php";
+
+$query = "SELECT * FROM mahasiswa";
+$data = ambildata($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
