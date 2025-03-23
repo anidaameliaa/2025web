@@ -16,14 +16,13 @@ $data = ambildata($query);
     <h1>DATA PRODI</h1>
     <br>
     <table border="1" cellspacing="0" cellpadding"S">
-        <thread>
+        <thead>
             <th>id</th>
             <th>nama</th>
             <th>kaprodi</th>
             <th>jurusan</th>
-    </thread>
+    </thead>
     <tbody>
-
         <?php
         $i = 1;
         foreach ($data as $d) : ?>

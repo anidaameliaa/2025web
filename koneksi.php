@@ -16,6 +16,5 @@ $data = [];
         $data[] = $baris;
 }
 return $data;
-};
-
+}
 ?>

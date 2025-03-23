@@ -13,25 +13,37 @@ $data = ambildata($query);
     <title>SIMPADU</title>
 </head>
 <body>
-    <h1>Data Mahasiswa</h1>
+    <h1>DATA MAHASISWA</h1>
     <br>
+    <a href = "tambahmahasiswa.php">tambah</a>
     <table border="1" cellspacing="0" cellpadding"S">
-        <thread>
+        <thead>
+        <tr>
             <th>No</th>
             <th>NIM</th>
             <th>Nama</th>
-    </thread>
+            <th>Tanggal Lahir</th>
+            <th>No Telp</th>
+            <th>Email</th>
+            <th>Id</th>
+    </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>E020323085</td>
-            <td>Amel</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>E020323108</td>
-            <td>Wika</td>
-        </tr>
+
+    <?php
+    $i = 1;
+    foreach ($data as $d) : ?>
+
+    <tr>
+    <td><?php echo $i++; ?></td>
+    <td><?= $d["nim"] ?></td>
+    <td><?= $d["nama"] ?></td>
+    <td><?= $d["tgl_lahir"] ?></td>
+    <td><?= $d["no_telp"] ?></td>
+    <td><?= $d["email"] ?></td>
+    <td><?= $d["id"] ?></td>
+    </tr>
+
+    <?php endforeach; ?>
         </tbody>
     </table>
 </body>
