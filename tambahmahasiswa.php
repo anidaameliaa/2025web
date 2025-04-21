@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
 
-$query = "SELECT * FROM Prodicommit ";
+$query = "SELECT * FROM prodi";
 $data = ambildata($query);
 ?>
 
