@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("location:login.html");
+}
+
 include "koneksi.php";
 
 $query = "SELECT m.*, p.nama namaProdi FROM mahasiswa m JOIN prodi p ON m.id = p.id";
@@ -37,7 +42,7 @@ $data = ambildata($query);
     <tr>
     <td><?= $i++; ?></td>
     <td><?= $d["nim"] ?></td>
-    <td><?= $d["nama"] ?></td>
+    <td><?= $dgit["nama"] ?></td>
     <td><?= $d["tgl_lahir"] ?></td>
     <td><?= $d["no_telp"] ?></td>
     <td><?= $d["email"] ?></td>
@@ -49,5 +54,6 @@ $data = ambildata($query);
     <?php endforeach; ?>
         </tbody>
     </table>
+    <a href = "logout.php">Logout</a>
 </body>
 </html>
