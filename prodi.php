@@ -69,5 +69,17 @@ include "template/sidebar.php"
             <!-- /.card -->
         </div>
         <!-- /.col -->
+
         <!-- /.col -->
     </div>
+<!-- /.row (main row) -->
+                            </div>
+<!--end::Container-->
+                            </div>
+<!--end::App Content-->
+                            </main>
+<!--end::App Main-->
+
+<?php
+include "template/footer.php";
+?>

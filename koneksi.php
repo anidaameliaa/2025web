@@ -17,4 +17,11 @@ $data = [];
 }
 return $data;
 }
+
+function ceklogin()
+{
+    if (!isset($_SESSION['login'])) {
+        header("location: login.html");
+    }
+}
 ?>
